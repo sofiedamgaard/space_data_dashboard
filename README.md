@@ -1,4 +1,5 @@
 **NASA APOD Explorer**
+
 A small web app that displays NASA’s Astronomy Picture of the Day, supporting both images and videos. The project focuses on clean UI, reliable API handling, and a simple, extensible architecture that can later include more NASA datasets.
 
 Tech Stack
