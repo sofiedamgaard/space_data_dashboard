@@ -1,6 +1,6 @@
 **NASA APOD Explorer**
 
-A small web app that displays NASA’s Astronomy Picture of the Day, supporting both images and videos. The project focuses on clean UI, reliable API handling, and a simple, extensible architecture that can later include more NASA datasets.
+A small web app that displays NASA’s Astronomy Picture of the Day, supporting both images and videos. Browse the complete archive from June 16, 1995 to present with date navigation. The project focuses on clean UI, reliable API handling, and a simple, extensible architecture that can later include more NASA datasets.
 
 Tech Stack
 - Next.js (App Router) for server-side rendering and routing
