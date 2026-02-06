@@ -1,5 +1,6 @@
 import { getApod } from "@/lib/nasa";
 import { DatePicker } from "@/components/DatePicker";
+import { ApodMedia } from "@/components/ApodMedia";
 
 interface PageProps {
   searchParams: Promise<{
@@ -25,23 +26,13 @@ export default async function Home({ searchParams }: PageProps) {
         <div className="rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-2xl glass-card">
           <div className="p-6">
             {/* Render video or image based on media_type */}
-            {apod.media_type === 'video' ? (
-              <div className="relative aspect-video rounded-lg overflow-hidden mb-4 bg-black">
-                <iframe
-                  src={apod.url}
-                  title={apod.title}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            ) : (
-              <img
-                src={apod.hdurl || apod.url}
-                alt={apod.title}
-                className="w-full rounded-lg mb-4 object-cover"
-              />
-            )}
+            <ApodMedia
+              key={apod.date}
+              mediaType={apod.media_type}
+              url={apod.url}
+              hdurl={apod.hdurl}
+              title={apod.title}
+            />
 
             {/* Date and copyright info */}
             <div className="flex flex-wrap items-center gap-3 mb-3 text-sm text-zinc-400">
