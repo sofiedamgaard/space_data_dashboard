@@ -58,7 +58,7 @@ export default async function Home({ searchParams }: PageProps) {
           </div>
         </div>
       </main>
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-6 md:bottom-8 right-6 md:right-8  z-50">
         <DatePicker currentDate={apod.date} variant="floating" />
       </div>
 

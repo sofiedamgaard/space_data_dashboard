@@ -106,8 +106,8 @@ export function DatePicker({ currentDate, variant = 'default' }: DatePickerProps
             onClick={() => setIsOpen(false)}
           />
           
-          {/* Date picker popup - adjusted positioning for mobile */}
-          <div className="absolute bottom-full mb-2 right-0 left-auto z-20 p-4 rounded-lg bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl sm:min-w-[240px]">
+          {/* Date picker popup */}
+          <div className="absolute bottom-full mb-2 right-0 left-auto z-20 p-4 rounded-lg bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
             <label className="block text-xs text-zinc-400 mb-2">
               Select a date
             </label>
@@ -119,13 +119,9 @@ export function DatePicker({ currentDate, variant = 'default' }: DatePickerProps
               onChange={handleDateChange}
               onClick={handleClick}
               onKeyDown={handleKeyDown}
-              className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
+              className="w-fit px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
               autoFocus
             />
-            {/* Hide helper text on mobile */}
-            <p className="mt-2 text-xs text-zinc-500 hidden sm:block">
-              Click date or use arrows + Enter
-            </p>
           </div>
         </>
       )}
