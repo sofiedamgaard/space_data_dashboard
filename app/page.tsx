@@ -23,7 +23,7 @@ export default async function Home({ searchParams }: PageProps) {
         <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gradient bg-clip-text text-transparent mb-4 leading-tight">
           {apod.title}
         </h1>
-        <div className="rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-2xl glass-card">
+        <div className="rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-2xl glass-card mb-15">
           <div className="p-6">
             {/* Render video or image based on media_type */}
             <ApodMedia
